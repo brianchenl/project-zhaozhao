@@ -8,7 +8,7 @@
         [
           "收录范围",
           [
-            "关注1931—1945年日本侵华与侵略东南亚的历史，以及战后官方表态。现提供简体中文、繁体中文、英文和日文版本；首批条目不代表全部事件的完整覆盖。"
+            "研究范围不限定近代：按各时代的具体政权、军队和行为，整理中国及东亚地区的战争、侵略、殖民统治与平民受害记录，并保留东南亚相关条目及战后表态。古代记载、战争事实与具体罪行分别核证，不预设从汉唐以来存在连续一致的国家责任。当前已收录内容仍以近现代为主，不代表完整历史覆盖。"
           ]
         ],
         [
@@ -28,7 +28,7 @@
         [
           "仓库访问",
           [
-            "仓库目前为私有，仅授权成员可访问。"
+            "源码仓库向公众开放，可查看内容、引用来源和版本记录。公开仓库不等于独立网站已上线，也不代表已被搜索引擎或 AI 收录。"
           ]
         ]
       ]
@@ -80,7 +80,7 @@
         [
           "提交渠道",
           [
-            "授权仓库成员可提交 GitHub Issue。仓库目前为私有，外部读者暂不能使用此入口；尚无已公布的公共邮箱或外部表单。"
+            "有 GitHub 账号的读者可通过公开仓库的 Issue 提交勘误，请勿提交个人隐私或敏感资料。尚无单独公布的公共邮箱或外部表单。"
           ]
         ],
         [
@@ -121,7 +121,7 @@
         [
           "收錄範圍",
           [
-            "關注1931—1945年日本侵華與侵略東南亞的歷史，以及戰後官方表態。現提供簡體中文、繁體中文、英文和日文版本；首批條目並不代表對全部事件的完整涵蓋。"
+            "研究範圍不限於近代：依各時代的具體政權、軍隊與行為，整理中國及東亞地區的戰爭、侵略、殖民統治與平民受害紀錄，並保留東南亞相關條目及戰後表態。古代記載、戰爭事實與具體罪行分別核證，不預設自漢唐以來存在連續一致的國家責任。目前收錄內容仍以近現代為主，不代表完整歷史涵蓋。"
           ]
         ],
         [
@@ -141,7 +141,7 @@
         [
           "儲存庫存取",
           [
-            "儲存庫目前為私人，僅授權成員可存取。"
+            "原始碼儲存庫向公眾開放，可查看內容、引用來源與版本紀錄。公開儲存庫不等於獨立網站已上線，也不代表已被搜尋引擎或 AI 收錄。"
           ]
         ]
       ]
@@ -193,7 +193,7 @@
         [
           "提交管道",
           [
-            "授權儲存庫成員可提交 GitHub Issue。儲存庫目前為私人，外部讀者暫不能使用此入口；尚無已公布的公共信箱或外部表單。"
+            "有 GitHub 帳號的讀者可透過公開儲存庫的 Issue 提交勘誤，請勿提交個人隱私或敏感資料。尚無另行公布的公共信箱或外部表單。"
           ]
         ],
         [
@@ -234,7 +234,7 @@
         [
           "Scope",
           [
-            "The project covers Japan’s invasion of China and aggression in Southeast Asia in 1931–1945, and postwar official statements. Simplified Chinese, Traditional Chinese, English and Japanese editions are available. The initial entries are not a comprehensive history."
+            "The scope is not limited to modern history. The project examines warfare, aggression, colonial rule and harm to civilians in China and East Asia, identifying the specific polity, military force and conduct in each period. Related Southeast Asian entries and postwar statements remain in scope. Ancient accounts, evidence of warfare and specific atrocities are assessed separately, without assuming continuous state responsibility since the Han and Tang periods. Current entries still focus on modern history and are not comprehensive."
           ]
         ],
         [
@@ -254,7 +254,7 @@
         [
           "Repository access",
           [
-            "The repository is currently private and accessible only to authorized members."
+            "The source repository is public, including content, references and revision history. A public repository does not mean that a standalone website is live or that search engines or AI systems have indexed it."
           ]
         ]
       ]
@@ -306,7 +306,7 @@
         [
           "Submitting corrections",
           [
-            "Authorized repository members can submit GitHub issues. The repository is currently private, so outside readers cannot yet use this route. No public email address or external correction form has been announced."
+            "Readers with a GitHub account can submit corrections through the public repository’s issues. Do not include private or sensitive information. No separate public email address or external form has been announced."
           ]
         ],
         [
@@ -347,7 +347,7 @@
         [
           "対象範囲",
           [
-            "1931〜1945年の日本による中国侵略と東南アジア侵略、および戦後の公式表明を対象とします。簡体字中国語、繁体字中国語、英語、日本語の各版を提供しています。初期の項目はすべての出来事を網羅するものではありません。"
+            "対象は近代史に限定しません。各時代の政権、軍隊、具体的な行為を区別し、中国と東アジアにおける戦争、侵略、植民地支配、民間人の被害を検証します。関連する東南アジアの項目と戦後の公式表明も対象に含めます。古代の記述、戦争の事実、個別の加害行為を別々に確かめ、漢・唐の時代から一貫した国家責任が続いているとは前提にしません。現在の収録内容はなお近現代が中心で、歴史全体を網羅してはいません。"
           ]
         ],
         [
@@ -367,7 +367,7 @@
         [
           "リポジトリへのアクセス",
           [
-            "現在リポジトリは非公開で、許可されたメンバーのみがアクセスできます。"
+            "ソースリポジトリは公開されており、内容、出典、改訂履歴を確認できます。リポジトリの公開は、独立したウェブサイトの公開や、検索エンジン・AIによる索引登録を意味するものではありません。"
           ]
         ]
       ]
@@ -419,7 +419,7 @@
         [
           "連絡方法",
           [
-            "許可されたリポジトリのメンバーは GitHub Issue を提出できます。現在リポジトリは非公開のため、外部の読者はこの方法を利用できません。公開メールアドレスや外部フォームはまだ設けていません。"
+            "GitHubアカウントをお持ちの方は、公開リポジトリのIssueから訂正を提案できます。個人情報や機密情報は投稿しないでください。別途公開されたメールアドレスや外部フォームはありません。"
           ]
         ],
         [
