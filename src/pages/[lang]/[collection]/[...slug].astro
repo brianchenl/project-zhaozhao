@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import EntryPage from '../../../components/EntryPage.astro';
+import { isPublic } from '../../../lib/content-schema.mjs';
+import { baseId, prefixes } from '../../../lib/locales.mjs';
+export async function getStaticPaths() {
+  const groups = await Promise.all([getCollection('facts', isPublic), getCollection('claims', isPublic), getCollection('ledger', isPublic)]);
+  return groups.flat().filter(e => e.data.languages[0] !== 'zh-CN').map(e => ({
+    params: { lang: prefixes[e.data.languages[0]], collection: e.collection, slug: baseId(e) },
+    props: { collection: e.collection, id: e.id }
+  }));
+}
+---
+<EntryPage {...Astro.props} />

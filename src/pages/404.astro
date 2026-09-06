@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { locales, languageNames, localizedPath } from '../lib/locales.mjs';
+import { t } from '../lib/i18n';
+---
+<BaseLayout title="页面不存在 / Page not found" description="此地址没有公开条目。 No published entry at this address." canonicalPath="/404.html" alternates={[]}>
+  <meta slot="head" name="robots" content="noindex" />
+  <h1>页面不存在</h1><p>该地址可能已变更或尚无公开条目。请<a href="/">返回条目目录</a>。</p>
+  <ul>{locales.map(lang => <li lang={lang}>{t(lang).notFoundText} <a href={localizedPath(lang)}>{languageNames[lang]}</a></li>)}</ul>
+</BaseLayout>

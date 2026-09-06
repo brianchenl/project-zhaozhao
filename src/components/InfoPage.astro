@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JsonLd from './JsonLd.astro';
+import { getPublicCatalog, repository } from '../lib/catalog';
+import { localizedPath } from '../lib/locales.mjs';
+import { t, countText, type Locale } from '../lib/i18n';
+import pages from '../i18n/pages.json';
+interface Props { lang?: Locale; page: 'about' | 'methodology' | 'corrections' | 'data'; }
+const { lang = 'zh-CN', page } = Astro.props;
+const u = t(lang);
+const content = pages[lang][page];
+const entries = page === 'data' ? await getPublicCatalog(lang === 'zh-CN' ? undefined : lang) : [];
+const schema = { '@context': 'https://schema.org', '@type': 'Organization', name: u.brand, alternateName: 'Project Zhaozhao', url: Astro.site?.toString(), sameAs: [repository] };
+---
+<BaseLayout title={content.title} description={content.description} lang={lang} basePath={`/${page}/`}>
+  {page === 'about' && <JsonLd slot="head" schema={schema} />}
+  <h1>{content.title}</h1><p class="summary">{content.lead}</p>
+  {content.sections.map(([heading, paragraphs]) => <section>
+    <h2>{heading}</h2>{(paragraphs as string[]).map(p => <p>{p}</p>)}
+  </section>)}
+  {page === 'data' && <section>
+    <h2>{u.dataLinks}</h2><p>{countText(u.dataCount, entries.length)}</p>
+    <ul>
+      <li><a href={localizedPath(lang, '/data/entries.json')} download>{u.json}</a></li>
+      <li><a href={localizedPath(lang, '/data/entries.csv')} download>{u.csv}</a></li>
+      <li><a href={localizedPath(lang, '/llms.txt')}>{u.llms}</a></li>
+      {lang !== 'zh-CN' && <li><a href="/data/entries.json">{u.allVersions}</a></li>}
+    </ul>
+  </section>}
+  {page === 'corrections' && <p><a href={`${repository}/issues/new`}>{u.issue}</a></p>}
+  {page === 'about' && <p><a href={repository}>{u.repo}</a></p>}
+  <p><a href="https://creativecommons.org/licenses/by/4.0/">{u.license}</a> · <a href={localizedPath(lang, '/methodology/')}>{u.nav.methodology}</a> · <a href={localizedPath(lang, '/corrections/')}>{u.nav.corrections}</a></p>
+</BaseLayout>

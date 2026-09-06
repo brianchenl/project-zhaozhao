@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPublicCatalog } from '../lib/catalog';
+import { localizedPath } from '../lib/locales.mjs';
+import { t, countText } from '../lib/i18n';
+interface Props { lang?: string; }
+const { lang = 'zh-CN' } = Astro.props;
+const u = t(lang);
+const entries = await getPublicCatalog(lang);
+---
+<BaseLayout title={u.homeTitle} description={u.homeIntro} lang={lang} basePath="/">
+  <h1>{u.brand}</h1>
+  <p class="summary">{u.homeIntro}</p>
+  <p>{countText(u.homeCount, entries.length)}</p>
+  <p>{u.homeGuide}: <a href={localizedPath(lang, '/methodology/')}>{u.nav.methodology}</a> · <a href={localizedPath(lang, '/data/')}>{u.nav.data}</a></p>
+  {(['facts', 'claims', 'ledger'] as const).map(section => <section aria-labelledby={section}>
+    <h2 id={section}>{u.sections[section]}</h2>
+    <ul class="item-list">
+      {entries.filter(e => e.collection === section).map(e => <li>
+        <a href={e.path}>{e.title}</a><div class="desc">{e.summary}</div>
+        <small>{countText(u.sourceCount, e.sources.length)} · {u.updated}: <time datetime={e.updated}>{e.updated}</time></small>
+      </li>)}
+    </ul>
+    {!entries.some(e => e.collection === section) && <p>{u.empty}</p>}
+  </section>)}
+</BaseLayout>

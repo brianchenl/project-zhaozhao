@@ -1,0 +1,202 @@
+:root {
+  --ink: #1f1d1a;
+  --ink-2: #4a463f;
+  --ink-3: #7a7367;
+  --paper: #fbf9f4;
+  --card: #ffffff;
+  --line: #e3ded2;
+  --cinnabar: #9c2a2a;
+  --jade: #2f6b57;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB',
+    'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+header.site {
+  border-bottom: 1px solid var(--line);
+  padding: 40px 0 24px;
+  margin-bottom: 48px;
+}
+
+header.site .brand {
+  font-family: 'Songti SC', 'Noto Serif SC', Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+header.site .brand-en {
+  font-size: 12px;
+  color: var(--ink-3);
+  letter-spacing: 0.14em;
+  margin-top: 4px;
+}
+
+header.site nav {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+header.site nav a {
+  color: var(--ink-2);
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+header.site nav a:hover {
+  color: var(--cinnabar);
+}
+
+header.site nav { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+header.site nav a { margin-right: 0; min-height: 44px; display: inline-flex; align-items: center; }
+header.site .languages { font-size: 14px; }
+.languages [aria-current="page"] { color: var(--cinnabar); text-decoration: underline; }
+.translation-note { font-size: 14px; padding: 12px 16px; background: #f1ede3; }
+html[lang="zh-Hant"] body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang TC', 'Noto Sans CJK TC', sans-serif; }
+html[lang="ja"] body { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Noto Sans CJK JP', Meiryo, sans-serif; }
+html[lang="zh-Hant"] h1, html[lang="zh-Hant"] .brand { font-family: 'Songti TC', 'Noto Serif CJK TC', serif; }
+html[lang="ja"] h1, html[lang="ja"] .brand { font-family: 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif; }
+
+h1 {
+  font-family: 'Songti SC', 'Noto Serif SC', Georgia, serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 40px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 28px 0 8px;
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+a {
+  color: var(--jade);
+}
+
+.summary {
+  font-size: 18px;
+  line-height: 1.85;
+  color: var(--ink);
+  background: var(--card);
+  border-left: 3px solid var(--cinnabar);
+  padding: 16px 20px;
+  margin: 0 0 32px;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--ink-3);
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  margin-top: 40px;
+  line-height: 1.9;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-right: 6px;
+  background: #f1ede3;
+  color: var(--ink-2);
+}
+
+.tag.draft {
+  background: #f7e9e9;
+  color: var(--cinnabar);
+}
+
+ol.sources {
+  font-size: 14px;
+  color: var(--ink-2);
+  padding-left: 20px;
+}
+
+.sources li { margin-bottom: 16px; }
+a { overflow-wrap: anywhere; }
+a:focus-visible { outline: 2px solid var(--jade); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-list li {
+  border-bottom: 1px solid var(--line);
+  padding: 18px 0;
+}
+
+.item-list a {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.item-list a:hover {
+  color: var(--cinnabar);
+}
+
+.item-list .desc {
+  font-size: 14px;
+  color: var(--ink-2);
+  margin-top: 6px;
+}
+
+footer.site {
+  margin-top: 72px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--ink-3);
+  line-height: 1.9;
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 26px;
+  }
+  .wrap {
+    padding: 0 18px 56px;
+  }
+}

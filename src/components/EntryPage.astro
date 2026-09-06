@@ -1,0 +1,62 @@
+---
+import { getEntry, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JsonLd from './JsonLd.astro';
+import Sources from './Sources.astro';
+import { isPublic } from '../lib/content-schema.mjs';
+import { baseId, localizedPath } from '../lib/locales.mjs';
+import { getPublicCatalog } from '../lib/catalog';
+import { t } from '../lib/i18n';
+interface Props { collection: 'facts' | 'claims' | 'ledger'; id: string; }
+const { collection, id } = Astro.props;
+const entry = await getEntry(collection, id) as CollectionEntry<'facts' | 'claims' | 'ledger'> | undefined;
+if (!entry || !isPublic(entry)) throw new Error(`Non-public entry: ${collection}/${id}`);
+const { Content } = await render(entry);
+const d = entry.data;
+const lang = d.languages[0];
+const u = t(lang);
+const title = 'title' in d ? d.title : d.claim;
+const url = new URL(Astro.url.pathname, Astro.site).toString();
+const originalPath = `/${collection}/${baseId(entry)}/`;
+const alternates = (await getPublicCatalog()).filter(e => e.translationKey === `${collection}/${baseId(entry)}`)
+  .map(e => ({ locale: e.languages[0], path: e.path }));
+const ratings = { false: 1, misleading: 2, unsupported: 2, 'partly-true': 3, true: 5 };
+const verdict = 'verdict' in d ? { value: ratings[d.verdict], name: u.verdicts[d.verdict] } : undefined;
+const schema: Record<string, unknown> = {
+  '@context': 'https://schema.org', '@type': collection === 'claims' ? 'ClaimReview' : 'Article',
+  headline: title, description: d.summary, url, mainEntityOfPage: url,
+  datePublished: d.published, dateModified: d.updated, inLanguage: lang,
+  author: { '@type': 'Organization', name: u.brand, url: Astro.site?.toString() },
+  publisher: { '@type': 'Organization', name: u.brand, url: Astro.site?.toString() },
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+  citation: d.sources.map(s => ({ '@type': 'CreativeWork', name: s.title, url: s.url, publisher: { '@type': 'Organization', name: s.publisher } }))
+};
+if ('claim' in d && verdict) {
+  schema.claimReviewed = d.claim;
+  schema.itemReviewed = { '@type': 'Claim', text: d.claim, description: d.claimContext };
+  schema.reviewRating = { '@type': 'Rating', ratingValue: verdict.value, bestRating: 5, worstRating: 1, alternateName: verdict.name };
+}
+if ('wikidata' in d && d.wikidata) schema.sameAs = `https://www.wikidata.org/wiki/${d.wikidata}`;
+if (d.translationOf) schema.translationOfWork = { '@type': 'Article', '@id': new URL(originalPath, Astro.site).toString(), inLanguage: 'zh-CN' };
+---
+<BaseLayout title={title} description={d.summary} lang={lang} basePath={originalPath} alternates={alternates}>
+  <JsonLd slot="head" schema={schema} />
+  <article>
+    <p><a href={localizedPath(lang, '/')}>{u.allEntries}</a> / {u.sections[collection]}</p>
+    <h1>{title}</h1>
+    <p class="summary">{verdict && <strong>{u.verdict}: {verdict.name}. </strong>}{d.summary}</p>
+    {d.translationOf && <aside class="translation-note">{u.translationNote} <a href={originalPath}>{u.original}</a> · {u.sourceVersion}: {d.sourceUpdated}</aside>}
+    {'claimContext' in d && <p class="context">{u.context}: {d.claimContext}</p>}
+    {'actor' in d && <p>{u.actor}: {d.actor} · {u.documentDate}: <time datetime={d.date}>{d.date}</time></p>}
+    <Content />
+    <Sources sources={d.sources} lang={lang} />
+    <div class="meta">
+      {'dateStart' in d && d.dateStart && <div>{u.eventDate}: {d.dateStart}{d.dateEnd ? ` – ${d.dateEnd}` : ''}</div>}
+      {'regions' in d && <div>{u.regions}: {d.regions.join(' · ')}</div>}
+      <div>{u.created}: <time datetime={d.published}>{d.published}</time> · {u.updated}: <time datetime={d.updated}>{d.updated}</time></div>
+      <p>{u.methodNote} <a href={localizedPath(lang, '/methodology/')}>{u.nav.methodology}</a></p>
+      <p>{u.cite}: {u.brand}, “{title}”, {d.updated}, <a href={url}>{url}</a>. {u.citationNote}</p>
+      <a href={localizedPath(lang, '/corrections/')}>{u.nav.corrections}</a>
+    </div>
+  </article>
+</BaseLayout>

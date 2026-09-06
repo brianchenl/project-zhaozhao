@@ -1,0 +1,454 @@
+{
+  "zh-CN": {
+    "about": {
+      "title": "关于昭昭计划",
+      "description": "项目范围、资料整理方法与引用许可。",
+      "lead": "昭昭计划整理历史文献及其出处，供读者独立核查与引用。",
+      "sections": [
+        [
+          "收录范围",
+          [
+            "关注1931—1945年日本侵华与侵略东南亚的历史，以及战后官方表态。现提供简体中文、繁体中文、英文和日文版本；首批条目不代表全部事件的完整覆盖。"
+          ]
+        ],
+        [
+          "资料如何整理",
+          [
+            "首批条目由 AI 辅助检索、编写和翻译，依据公开原文及馆藏说明核对。译文沿用原文证据链，不算新增独立史料。尚无独立专家团队或母语审校记录，不将自动检查等同于专家鉴定或双人签字。",
+            "区分事实、统计口径与评论；批判侵略行为和对史实的否认，不针对日本人民。"
+          ]
+        ],
+        [
+          "引用与许可",
+          [
+            "原创整理文字采用 CC BY 4.0，代码采用 MIT。第三方文献、照片和影片按原持有机构的权利说明使用，本项目不能代为授权。",
+            "引用时保留标题、语言版本、更新时间、链接和原始出处；涉及数字时保留时间与统计范围。"
+          ]
+        ],
+        [
+          "仓库访问",
+          [
+            "仓库目前为私有，仅授权成员可访问。"
+          ]
+        ]
+      ]
+    },
+    "methodology": {
+      "title": "内容规范与证据限制",
+      "description": "出处独立性、核对范围、翻译和统计口径。",
+      "lead": "可追溯的出处与明确的适用范围，是接受一项结论的基础。",
+      "sections": [
+        [
+          "出处与独立性",
+          [
+            "条目至少列出两个独立来源链，记录题名、机构、网址、定位和查阅日期。同一文书的译本、重印与镜像不重复计数。",
+            "文书、影像和有来源记录的实物可提供不同证据。同馆说明可能相互参考；两项出处不意味着每个细节都获双重证明。"
+          ]
+        ],
+        [
+          "核对范围",
+          [
+            "阅读影片说明不等于逐帧观看，查看实物著录不等于现场鉴定，自动检查不能判断史料真伪。结论附就近引用，不补入原文未证实的精确时间、人数、动机或后续政策。"
+          ]
+        ],
+        [
+          "数字与核查",
+          [
+            "数字须说明地域、时间、对象、方法与出处；不平均或相加不同口径。司法认定、档案记载和学者估计分别呈现。",
+            "核查保留上下文；编辑拟题会明确标注，不虚构发言者或流传范围。"
+          ]
+        ],
+        [
+          "语言版本",
+          [
+            "译文标记简体中文原文及其版本日期。正文、事实字段、出处链接保持对应；原文实质更新后，译文必须复核后才能通过检查。翻译不产生新的独立证据，也不代表官方译文。"
+          ]
+        ],
+        [
+          "版本与引用",
+          [
+            "日期反映创建与实质修订。引用保留原始出处及限定，不把项目摘要当作档案原文。结构化数据和开放抓取不代表搜索引擎认证或引用效果保证。"
+          ]
+        ]
+      ]
+    },
+    "corrections": {
+      "title": "勘误与版本记录",
+      "description": "如何提交更正，以及内容和语言版本的记录。",
+      "lead": "更正时请提供条目与语言版本、需要修改的原句、建议改法、来源网址和页码或档案号。",
+      "sections": [
+        [
+          "提交渠道",
+          [
+            "授权仓库成员可提交 GitHub Issue。仓库目前为私有，外部读者暂不能使用此入口；尚无已公布的公共邮箱或外部表单。"
+          ]
+        ],
+        [
+          "记录",
+          [
+            "2026-09-06：建立首版资料目录与数据导出，增加繁体中文、英文和日文版本。暂无已确认的历史事实勘误记录。"
+          ]
+        ]
+      ]
+    },
+    "data": {
+      "title": "开放数据",
+      "description": "下载各语言的出处、日期和正文。",
+      "lead": "每个语言版本都关联原文和相同证据链；不同语言的同一条目不应计作多个独立历史来源。",
+      "sections": [
+        [
+          "字段",
+          [
+            "JSON 格式版本为 2。collection 为类别，id 为版本标识，translationKey 关联同一条目的各语言版本，languages 标记语言。translationOf 和 sourceUpdated 标记译文依据的原文与日期。sources 保存出处，body 为 Markdown 正文。"
+          ]
+        ],
+        [
+          "使用",
+          [
+            "CSV 使用 UTF-8 BOM，sources_json 列可按 JSON 解析。可能被识别为公式的文本加单引号保护；精确机器处理优先使用 JSON。",
+            "根目录数据包含全部语言，带语言前缀的数据只包含对应版本。原创内容采用 CC BY 4.0；保留具体出处和范围，第三方资料按原权利声明使用。"
+          ]
+        ]
+      ]
+    }
+  },
+  "zh-Hant": {
+    "about": {
+      "title": "關於昭昭計畫",
+      "description": "專案範圍、資料整理方法與引用授權。",
+      "lead": "昭昭計畫整理歷史文獻及其出處，供讀者獨立核查與引用。",
+      "sections": [
+        [
+          "收錄範圍",
+          [
+            "關注1931—1945年日本侵華與侵略東南亞的歷史，以及戰後官方表態。現提供簡體中文、繁體中文、英文和日文版本；首批條目並不代表對全部事件的完整涵蓋。"
+          ]
+        ],
+        [
+          "資料如何整理",
+          [
+            "首批條目由 AI 輔助檢索、編寫和翻譯，依據公開原文及館藏說明核對。譯文沿用原文證據鏈，不算新增獨立史料。尚無獨立專家團隊或母語審校紀錄，不將自動檢查等同於專家鑑定或雙人簽署。",
+            "區分事實、統計口徑與評論；批判侵略行為和對史實的否認，不針對日本人民。"
+          ]
+        ],
+        [
+          "引用與授權",
+          [
+            "原創整理文字採用 CC BY 4.0，程式碼採用 MIT。第三方文獻、照片和影片依原持有機構的權利說明使用，本專案不能代為授權。",
+            "引用時保留標題、語言版本、更新日期、連結和原始出處；涉及數字時保留時間與統計範圍。"
+          ]
+        ],
+        [
+          "儲存庫存取",
+          [
+            "儲存庫目前為私人，僅授權成員可存取。"
+          ]
+        ]
+      ]
+    },
+    "methodology": {
+      "title": "內容規範與證據限制",
+      "description": "出處獨立性、核對範圍、翻譯和統計口徑。",
+      "lead": "可追溯的出處與明確的適用範圍，是接受一項結論的基礎。",
+      "sections": [
+        [
+          "出處與獨立性",
+          [
+            "條目至少列出兩個獨立來源鏈，記錄題名、機構、網址、定位和查閱日期。同一文書的譯本、重印與鏡像不重複計數。",
+            "文書、影像和有來源紀錄的實物可提供不同證據。同館說明可能相互參考；兩項出處不代表每個細節都獲雙重證明。"
+          ]
+        ],
+        [
+          "核對範圍",
+          [
+            "閱讀影片說明不等於逐格觀看，查看實物著錄不等於現場鑑定，自動檢查不能判斷史料真偽。結論附就近引用，不補入原文未證實的精確時間、人數、動機或後續政策。"
+          ]
+        ],
+        [
+          "數字與核查",
+          [
+            "數字須說明地域、時間、對象、方法與出處；不將不同口徑平均或相加。司法認定、檔案記載和學者估計分別呈現。",
+            "核查保留上下文；編輯擬題會明確標註，不虛構發言者或流傳範圍。"
+          ]
+        ],
+        [
+          "語言版本",
+          [
+            "譯文標記簡體中文原文及其版本日期。正文、事實欄位與出處連結保持對應；原文實質更新後，譯文必須複核後才能通過檢查。翻譯不產生新的獨立證據，也不代表官方譯文。"
+          ]
+        ],
+        [
+          "版本與引用",
+          [
+            "日期反映建立與實質修訂。引用保留原始出處及限定，不把專案摘要當作檔案原文。結構化資料與開放擷取不代表搜尋引擎認證或引用效果保證。"
+          ]
+        ]
+      ]
+    },
+    "corrections": {
+      "title": "勘誤與版本紀錄",
+      "description": "如何提交更正，以及內容和語言版本的紀錄。",
+      "lead": "更正時請提供條目與語言版本、需修改的原句、建議改法、來源網址和頁碼或檔案號。",
+      "sections": [
+        [
+          "提交管道",
+          [
+            "授權儲存庫成員可提交 GitHub Issue。儲存庫目前為私人，外部讀者暫不能使用此入口；尚無已公布的公共信箱或外部表單。"
+          ]
+        ],
+        [
+          "紀錄",
+          [
+            "2026-09-06：建立首版資料目錄與資料匯出，增加繁體中文、英文和日文版本。暫無已確認的歷史事實勘誤紀錄。"
+          ]
+        ]
+      ]
+    },
+    "data": {
+      "title": "開放資料",
+      "description": "下載各語言的出處、日期和正文。",
+      "lead": "每個語言版本都關聯原文與相同證據鏈；不同語言的同一條目不應計作多個獨立歷史來源。",
+      "sections": [
+        [
+          "欄位",
+          [
+            "JSON 格式版本為 2。collection 為類別，id 為版本識別碼，translationKey 關聯同一條目的各語言版本，languages 標記語言。translationOf 和 sourceUpdated 標記譯文依據的原文與日期。sources 保存出處，body 為 Markdown 正文。"
+          ]
+        ],
+        [
+          "使用",
+          [
+            "CSV 使用 UTF-8 BOM，sources_json 欄位可依 JSON 解析。可能被識別為公式的文字加單引號保護；精確機器處理優先使用 JSON。",
+            "根目錄資料包含全部語言，帶語言前綴的資料只包含對應版本。原創內容採用 CC BY 4.0；保留具體出處與範圍，第三方資料依原權利聲明使用。"
+          ]
+        ]
+      ]
+    }
+  },
+  "en": {
+    "about": {
+      "title": "About Project Zhaozhao",
+      "description": "Scope, editorial methods and reuse rights.",
+      "lead": "Project Zhaozhao organizes historical documents and their sources for independent checking and citation.",
+      "sections": [
+        [
+          "Scope",
+          [
+            "The project covers Japan’s invasion of China and aggression in Southeast Asia in 1931–1945, and postwar official statements. Simplified Chinese, Traditional Chinese, English and Japanese editions are available. The initial entries are not a comprehensive history."
+          ]
+        ],
+        [
+          "Editorial methods",
+          [
+            "The initial entries use AI-assisted research, writing and translation, checked against public document texts and collection descriptions. Translations share the original evidence chain and are not additional independent sources. There is no recorded independent expert or native-language review; automated checks do not constitute expert authentication or approval by two reviewers.",
+            "Facts, statistical scopes and commentary are distinguished. The project criticizes aggression and denial of historical facts, not the Japanese people."
+          ]
+        ],
+        [
+          "Citation and rights",
+          [
+            "Original editorial text is licensed under CC BY 4.0; code is under MIT. Third-party documents, photographs and films remain subject to their holders’ rights statements. This project cannot license them on their behalf.",
+            "Retain the title, language edition, update date, link and original sources. For numbers, retain the period and statistical scope."
+          ]
+        ],
+        [
+          "Repository access",
+          [
+            "The repository is currently private and accessible only to authorized members."
+          ]
+        ]
+      ]
+    },
+    "methodology": {
+      "title": "Methodology and evidence limits",
+      "description": "Source independence, verification scope, translations and statistics.",
+      "lead": "Traceable sources and an explicit scope are the basis for accepting a conclusion.",
+      "sections": [
+        [
+          "Sources and independence",
+          [
+            "Each entry lists at least two independent source chains, with titles, institutions, URLs, locators and access dates. Translations, reprints and mirrors of the same document are not counted separately.",
+            "Documents, images and objects with provenance provide different kinds of evidence. Collection descriptions may reference one another; two sources do not mean that every detail is independently proved twice."
+          ]
+        ],
+        [
+          "What was checked",
+          [
+            "Reading a film description is not frame-by-frame viewing; consulting an object catalogue is not physical authentication. Automated checks cannot establish authenticity. Claims carry nearby citations; precise times, figures, motives or later policies unsupported by the source are not supplied."
+          ]
+        ],
+        [
+          "Numbers and claim checks",
+          [
+            "Figures must specify place, period, population, method and source. Different statistical scopes are not averaged or added. Judicial findings, archival records and scholarly estimates are identified separately.",
+            "Checks retain context. Editorially composed questions are identified as such, without invented speakers or claims about how widely a statement circulated."
+          ]
+        ],
+        [
+          "Language editions",
+          [
+            "Translations identify the Simplified Chinese original and its version date. Text, factual fields and source links remain aligned. A substantive source update requires renewed translation checking before validation passes. Translation does not produce independent evidence or constitute an official translation."
+          ]
+        ],
+        [
+          "Versions and citation",
+          [
+            "Dates record creation and substantive revisions. Keep original sources and limitations when citing; project summaries are not archival originals. Structured data and open crawling do not imply search-engine certification or guaranteed citations."
+          ]
+        ]
+      ]
+    },
+    "corrections": {
+      "title": "Corrections and version record",
+      "description": "How to propose corrections and identify language versions.",
+      "lead": "Provide the entry and language edition, the sentence to change, a proposed correction, and a source URL with a page or archival reference.",
+      "sections": [
+        [
+          "Submitting corrections",
+          [
+            "Authorized repository members can submit GitHub issues. The repository is currently private, so outside readers cannot yet use this route. No public email address or external correction form has been announced."
+          ]
+        ],
+        [
+          "Record",
+          [
+            "2026-09-06: Initial document catalogue and data exports established; Traditional Chinese, English and Japanese editions added. No confirmed historical-fact corrections have yet been recorded."
+          ]
+        ]
+      ]
+    },
+    "data": {
+      "title": "Open data",
+      "description": "Download sources, dates and full text in each language.",
+      "lead": "Each language edition links to its original and shares the same evidence chain. Translations of one entry must not be counted as independent historical sources.",
+      "sections": [
+        [
+          "Fields",
+          [
+            "The JSON schema version is 2. collection identifies the category, id the edition, translationKey groups language versions of an entry, and languages identifies the language. translationOf and sourceUpdated record the original and its version date. sources contains references; body contains Markdown text."
+          ]
+        ],
+        [
+          "Use",
+          [
+            "CSV uses a UTF-8 BOM; sources_json can be parsed as JSON. Text that could be interpreted as a spreadsheet formula is prefixed with an apostrophe. Prefer JSON for exact machine processing.",
+            "Root-level exports contain all languages; language-prefixed exports contain only that edition. Original editorial text is under CC BY 4.0. Retain specific sources and scope; third-party material remains subject to its own rights."
+          ]
+        ]
+      ]
+    }
+  },
+  "ja": {
+    "about": {
+      "title": "昭昭計画について",
+      "description": "対象範囲、編集方法、引用と利用条件。",
+      "lead": "昭昭計画は、歴史文書とその出典を整理し、読者が独自に確認し引用できるようにするプロジェクトです。",
+      "sections": [
+        [
+          "対象範囲",
+          [
+            "1931〜1945年の日本による中国侵略と東南アジア侵略、および戦後の公式表明を対象とします。簡体字中国語、繁体字中国語、英語、日本語の各版を提供しています。初期の項目はすべての出来事を網羅するものではありません。"
+          ]
+        ],
+        [
+          "編集方法",
+          [
+            "初期の項目は AI を用いて調査・執筆・翻訳し、公開原文と所蔵機関の解説に照らして確認しています。翻訳は原文と同じ出典に基づき、新たな独立史料には数えません。独立した専門家や母語話者による校閲の記録はなく、自動検査は専門家の鑑定や二名による承認と同等ではありません。",
+            "事実、統計の対象範囲、論評を区別します。侵略行為や史実の否認を批判するものであり、日本の人々を批判の対象とするものではありません。"
+          ]
+        ],
+        [
+          "引用と権利",
+          [
+            "独自に作成した解説文は CC BY 4.0、コードは MIT ライセンスで提供します。第三者の文書・写真・映像には所蔵機関などの権利表示が適用され、本プロジェクトが代わりに利用を許諾することはできません。",
+            "引用時は題名、言語版、更新日、リンク、原出典を残してください。数値については期間と統計の対象範囲も残してください。"
+          ]
+        ],
+        [
+          "リポジトリへのアクセス",
+          [
+            "現在リポジトリは非公開で、許可されたメンバーのみがアクセスできます。"
+          ]
+        ]
+      ]
+    },
+    "methodology": {
+      "title": "編集方針と根拠の限界",
+      "description": "出典の独立性、確認範囲、翻訳と統計について。",
+      "lead": "追跡可能な出典と明示された適用範囲を、結論を採用するための基礎とします。",
+      "sections": [
+        [
+          "出典と独立性",
+          [
+            "各項目には少なくとも二つの独立した出典系統を示し、題名、機関、URL、参照箇所、閲覧日を記録します。同一文書の翻訳、再版、ミラーは別々に数えません。",
+            "文書、映像、来歴のある実物は異なる種類の根拠を提供します。同じ機関の解説が相互に参照している場合もあり、二つの出典があることは細部のすべてが二重に立証されていることを意味しません。"
+          ]
+        ],
+        [
+          "確認した範囲",
+          [
+            "映像の解説を読むことは全コマの確認とは異なり、収蔵品目録の参照は実物鑑定とは異なります。自動検査では史料の真偽を判定できません。結論の近くに出典を示し、原文で裏付けられない正確な時刻、人数、動機、後の政策を補いません。"
+          ]
+        ],
+        [
+          "数値と言説の検証",
+          [
+            "数値には地域、期間、対象、方法、出典を明記します。対象範囲の異なる数値を平均したり合算したりしません。司法判断、史料の記載、研究者の推計を区別します。",
+            "検証では文脈を保持します。編集側が作成した設問はその旨を明記し、発言者や流布の程度を捏造しません。"
+          ]
+        ],
+        [
+          "言語版",
+          [
+            "翻訳には簡体字中国語の原文と、その版の日付を記録します。本文、事実を示す項目、出典リンクを対応させ、原文が実質的に更新された場合は翻訳を再確認するまで検査を通過できません。翻訳は独立した根拠を増やすものでも公式訳でもありません。"
+          ]
+        ],
+        [
+          "版と引用",
+          [
+            "日付は作成と実質的な改訂を示します。引用では原出典と限定を残し、本プロジェクトの要約を史料原文とみなさないでください。構造化データやクロールの許可は、検索エンジンの認証や引用の保証を意味しません。"
+          ]
+        ]
+      ]
+    },
+    "corrections": {
+      "title": "訂正と版の記録",
+      "description": "訂正の提案方法と言語版の記録。",
+      "lead": "項目と言語版、修正対象の文、修正案、出典 URL とページまたは資料番号をお知らせください。",
+      "sections": [
+        [
+          "連絡方法",
+          [
+            "許可されたリポジトリのメンバーは GitHub Issue を提出できます。現在リポジトリは非公開のため、外部の読者はこの方法を利用できません。公開メールアドレスや外部フォームはまだ設けていません。"
+          ]
+        ],
+        [
+          "記録",
+          [
+            "2026-09-06：初版の資料一覧とデータ出力を整備し、繁体字中国語・英語・日本語版を追加しました。確定した歴史的事実の訂正はまだ記録されていません。"
+          ]
+        ]
+      ]
+    },
+    "data": {
+      "title": "公開データ",
+      "description": "各言語の出典、日付、本文をダウンロードできます。",
+      "lead": "各言語版は原文に対応し、同じ出典系統に基づいています。同一項目の翻訳を複数の独立した歴史資料として数えないでください。",
+      "sections": [
+        [
+          "データ項目",
+          [
+            "JSON スキーマのバージョンは 2 です。collection は分類、id は版の識別子、translationKey は同一項目の言語版を結び付けるキー、languages は言語です。translationOf と sourceUpdated は翻訳元とその版の日付、sources は出典、body は Markdown 本文です。"
+          ]
+        ],
+        [
+          "利用方法",
+          [
+            "CSV は UTF-8 BOM を使用し、sources_json 列は JSON として解析できます。表計算式として解釈される可能性のある文字列にはアポストロフィを付けます。厳密な機械処理には JSON を推奨します。",
+            "ルート階層のデータは全言語を含み、言語別 URL のデータはその版のみを含みます。独自の解説文は CC BY 4.0 です。出典と対象範囲を残し、第三者資料には元の権利表示を適用してください。"
+          ]
+        ]
+      ]
+    }
+  }
+}

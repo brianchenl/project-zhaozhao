@@ -1,0 +1,10 @@
+---
+import InfoPage from '../../components/InfoPage.astro';
+import { infoPages } from '../../lib/catalog';
+import { translatedLocales, prefixes } from '../../lib/locales.mjs';
+export function getStaticPaths() {
+  return translatedLocales.flatMap(lang => infoPages.map(page => ({ params: { lang: prefixes[lang], page }, props: { lang, page } })));
+}
+const { lang, page } = Astro.props;
+---
+<InfoPage lang={lang} page={page} />

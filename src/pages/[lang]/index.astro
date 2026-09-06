@@ -1,0 +1,7 @@
+---
+import HomePage from '../../components/HomePage.astro';
+import { translatedLocales, prefixes } from '../../lib/locales.mjs';
+export function getStaticPaths() { return translatedLocales.map(lang => ({ params: { lang: prefixes[lang] }, props: { lang } })); }
+const { lang } = Astro.props;
+---
+<HomePage lang={lang} />

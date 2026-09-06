@@ -1,0 +1,50 @@
+---
+import '../styles/global.css';
+import { t, type Locale } from '../lib/i18n';
+import { locales, localizedPath, languageNames } from '../lib/locales.mjs';
+interface Props {
+  title: string; description: string; lang?: string; canonicalPath?: string;
+  basePath?: string; alternates?: { locale: Locale; path: string }[];
+}
+const { title, description, lang = 'zh-CN', canonicalPath = Astro.url.pathname, basePath = '/', alternates } = Astro.props;
+const u = t(lang);
+const canonical = new URL(canonicalPath, Astro.site);
+const fullTitle = title.includes(u.brand) ? title : `${title} · ${u.brand}`;
+const versions = alternates ?? locales.map(locale => ({ locale, path: localizedPath(locale, basePath) }));
+const defaultVersion = versions.find(v => v.locale === 'zh-CN');
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {versions.map(v => <link rel="alternate" hreflang={v.locale} href={new URL(v.path, Astro.site)} />)}
+    {defaultVersion && <link rel="alternate" hreflang="x-default" href={new URL(defaultVersion.path, Astro.site)} />}
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <slot name="head" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="site">
+        <a class="brand" href={localizedPath(lang)}>{u.brand}</a>
+        <div class="brand-en">PROJECT ZHAOZHAO · THE SETTLED RECORD</div>
+        <nav aria-label={u.navLabel}>
+          <a href={localizedPath(lang)}>{u.nav.home}</a>
+          {(['methodology', 'data', 'corrections', 'about'] as const).map(page => <a href={localizedPath(lang, `/${page}/`)}>{u.nav[page]}</a>)}
+        </nav>
+        <nav class="languages" aria-label={u.languageNav}>
+          {versions.map(v => <a href={v.path} lang={v.locale} hreflang={v.locale} aria-current={v.locale === lang ? 'page' : undefined}>{languageNames[v.locale]}</a>)}
+        </nav>
+      </header>
+      <main><slot /></main>
+      <footer class="site">{u.brand} · {u.footer}<br />{u.footerNote}</footer>
+    </div>
+  </body>
+</html>
