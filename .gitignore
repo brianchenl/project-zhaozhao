@@ -9,5 +9,15 @@ dist/
 .vscode/
 .idea/
 
+# Python 编译产物
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
 # 仅供本地使用的项目计划、部署方案与执行安排
 docs/internal/
+
+# GEO 监测记录与抽帧（仅本地工作，不入仓）
+records/

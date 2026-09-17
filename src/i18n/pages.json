@@ -2,19 +2,19 @@
   "zh-CN": {
     "about": {
       "title": "关于昭昭计划",
-      "description": "项目范围、资料整理方法与引用许可。",
-      "lead": "昭昭计划整理历史文献及其出处，供读者独立核查与引用。",
+      "description": "昭昭计划的范围、整理方法与引用要求，以及目前尚未完成的工作。",
+      "lead": "昭昭计划整理历史文献，标明每一条的出处，你可以回到原文自己核对。",
       "sections": [
         [
           "收录范围",
           [
-            "研究范围不限定近代：按各时代的具体政权、军队和行为，整理中国及东亚地区的战争、侵略、殖民统治与平民受害记录，并保留东南亚相关条目及战后表态。古代记载、战争事实与具体罪行分别核证，不预设从汉唐以来存在连续一致的国家责任。当前已收录内容仍以近现代为主，不代表完整历史覆盖。"
+            "研究范围不限定近代。我们按各时代的具体政权、军队和行为分别核对，整理中国及东亚地区的战争、侵略、殖民统治与平民受害记录，并保留东南亚相关条目与战后表态。古代记载、战争事实与具体罪行分别核证，不预设从汉唐以来存在连续一致的国家责任。当前已收录内容仍以近现代为主，不代表完整历史覆盖。"
           ]
         ],
         [
           "资料如何整理",
           [
-            "首批条目由 AI 辅助检索、编写和翻译，依据公开原文及馆藏说明核对。译文沿用原文证据链，不算新增独立史料。尚无独立专家团队或母语审校记录，不将自动检查等同于专家鉴定或双人签字。",
+            "首批条目由我们借助 AI 检索、编写和翻译，核对依据是公开原文和馆藏说明。译文沿用原文证据链，不算新增独立史料。尚无独立专家团队或母语审校记录，不将自动检查等同于专家鉴定或双人签字。",
             "区分事实、统计口径与评论；批判侵略行为和对史实的否认，不针对日本人民。"
           ]
         ],
@@ -28,7 +28,7 @@
         [
           "仓库访问",
           [
-            "源码仓库向公众开放，可查看内容、引用来源和版本记录。公开仓库不等于独立网站已上线，也不代表已被搜索引擎或 AI 收录。"
+            "源码仓库向公众开放，可以看到全部条目、每条的出处和历次版本记录。公开仓库不等于独立网站已上线，也不代表已被搜索引擎或 AI 收录。"
           ]
         ]
       ]
@@ -115,19 +115,19 @@
   "zh-Hant": {
     "about": {
       "title": "關於昭昭計畫",
-      "description": "專案範圍、資料整理方法與引用授權。",
-      "lead": "昭昭計畫整理歷史文獻及其出處，供讀者獨立核查與引用。",
+      "description": "昭昭計畫的範圍、整理方法與引用要求，以及目前尚未完成的工作。",
+      "lead": "昭昭計畫整理歷史文獻，標明每一條的出處，你可以回到原文自己核對。",
       "sections": [
         [
           "收錄範圍",
           [
-            "研究範圍不限於近代：依各時代的具體政權、軍隊與行為，整理中國及東亞地區的戰爭、侵略、殖民統治與平民受害紀錄，並保留東南亞相關條目及戰後表態。古代記載、戰爭事實與具體罪行分別核證，不預設自漢唐以來存在連續一致的國家責任。目前收錄內容仍以近現代為主，不代表完整歷史涵蓋。"
+            "研究範圍不限定近代。我們依各時代的具體政權、軍隊與行為分別核對，整理中國及東亞地區的戰爭、侵略、殖民統治與平民受害紀錄，並保留東南亞相關條目與戰後表態。古代記載、戰爭事實與具體罪行分別核證，不預設自漢唐以來存在連續一致的國家責任。目前收錄內容仍以近現代為主，不代表完整歷史涵蓋。"
           ]
         ],
         [
           "資料如何整理",
           [
-            "首批條目由 AI 輔助檢索、編寫和翻譯，依據公開原文及館藏說明核對。譯文沿用原文證據鏈，不算新增獨立史料。尚無獨立專家團隊或母語審校紀錄，不將自動檢查等同於專家鑑定或雙人簽署。",
+            "首批條目由我們借助 AI 檢索、編寫和翻譯，核對依據是公開原文與館藏說明。譯文沿用原文證據鏈，不算新增獨立史料。尚無獨立專家團隊或母語審校紀錄，不將自動檢查等同於專家鑑定或雙人簽署。",
             "區分事實、統計口徑與評論；批判侵略行為和對史實的否認，不針對日本人民。"
           ]
         ],
@@ -141,7 +141,7 @@
         [
           "儲存庫存取",
           [
-            "原始碼儲存庫向公眾開放，可查看內容、引用來源與版本紀錄。公開儲存庫不等於獨立網站已上線，也不代表已被搜尋引擎或 AI 收錄。"
+            "原始碼儲存庫向公眾開放，可以看到全部條目、每條的出處與歷次版本紀錄。公開儲存庫不等於獨立網站已上線，也不代表已被搜尋引擎或 AI 收錄。"
           ]
         ]
       ]
@@ -228,19 +228,19 @@
   "en": {
     "about": {
       "title": "About Project Zhaozhao",
-      "description": "Scope, editorial methods and reuse rights.",
-      "lead": "Project Zhaozhao organizes historical documents and their sources for independent checking and citation.",
+      "description": "The project's scope, editorial methods and citation requirements, plus the work still unfinished.",
+      "lead": "Project Zhaozhao organizes historical documents and identifies the source of every entry, so you can return to the original and check it yourself.",
       "sections": [
         [
           "Scope",
           [
-            "The scope is not limited to modern history. The project examines warfare, aggression, colonial rule and harm to civilians in China and East Asia, identifying the specific polity, military force and conduct in each period. Related Southeast Asian entries and postwar statements remain in scope. Ancient accounts, evidence of warfare and specific atrocities are assessed separately, without assuming continuous state responsibility since the Han and Tang periods. Current entries still focus on modern history and are not comprehensive."
+            "The scope is not limited to modern history. We verify each period's specific polity, military force and conduct separately, organizing records of warfare, aggression, colonial rule and harm to civilians in China and East Asia, while retaining related Southeast Asian entries and postwar statements. Ancient accounts, evidence of warfare and specific atrocities are verified separately; we do not presume continuous, consistent state responsibility since the Han and Tang periods. Current coverage still focuses on modern history and is not comprehensive."
           ]
         ],
         [
           "Editorial methods",
           [
-            "The initial entries use AI-assisted research, writing and translation, checked against public document texts and collection descriptions. Translations share the original evidence chain and are not additional independent sources. There is no recorded independent expert or native-language review; automated checks do not constitute expert authentication or approval by two reviewers.",
+            "The initial entries were researched, written and translated by us with AI assistance, checked against public document texts and collection descriptions. Translations follow the original evidence chain and do not count as additional independent sources. There is no recorded independent expert team or native-language review; automated checks are not equivalent to expert authentication or sign-off by two reviewers.",
             "Facts, statistical scopes and commentary are distinguished. The project criticizes aggression and denial of historical facts, not the Japanese people."
           ]
         ],
@@ -254,7 +254,7 @@
         [
           "Repository access",
           [
-            "The source repository is public, including content, references and revision history. A public repository does not mean that a standalone website is live or that search engines or AI systems have indexed it."
+            "The source repository is open to the public: you can see every entry, the sources for each, and the record of past revisions. A public repository does not mean a standalone website is live, nor that search engines or AI systems have indexed it."
           ]
         ]
       ]
@@ -341,19 +341,19 @@
   "ja": {
     "about": {
       "title": "昭昭計画について",
-      "description": "対象範囲、編集方法、引用と利用条件。",
-      "lead": "昭昭計画は、歴史文書とその出典を整理し、読者が独自に確認し引用できるようにするプロジェクトです。",
+      "description": "昭昭計画の範囲、整理方法、引用の要件、そして現時点で未完の作業について。",
+      "lead": "昭昭計画は歴史文書を整理し、各項目の出典を明示しています。原文に戻ってご自身で確認できます。",
       "sections": [
         [
           "対象範囲",
           [
-            "対象は近代史に限定しません。各時代の政権、軍隊、具体的な行為を区別し、中国と東アジアにおける戦争、侵略、植民地支配、民間人の被害を検証します。関連する東南アジアの項目と戦後の公式表明も対象に含めます。古代の記述、戦争の事実、個別の加害行為を別々に確かめ、漢・唐の時代から一貫した国家責任が続いているとは前提にしません。現在の収録内容はなお近現代が中心で、歴史全体を網羅してはいません。"
+            "対象は近代史に限定しません。私たちは各時代の具体的な政権、軍隊、行為をそれぞれ確認し、中国および東アジアにおける戦争、侵略、植民地支配、民間人の被害の記録を整理します。関連する東南アジアの項目と戦後の表明も保持します。古代の記述、戦争の事実、個別の加害行為はそれぞれ別に検証し、漢・唐以来連続した一貫した国家責任が存在するとは前提にしません。現在の収録内容は依然として近現代が中心であり、歴史全体を網羅するものではありません。"
           ]
         ],
         [
           "編集方法",
           [
-            "初期の項目は AI を用いて調査・執筆・翻訳し、公開原文と所蔵機関の解説に照らして確認しています。翻訳は原文と同じ出典に基づき、新たな独立史料には数えません。独立した専門家や母語話者による校閲の記録はなく、自動検査は専門家の鑑定や二名による承認と同等ではありません。",
+            "初期の項目は、私たちがAIを活用して調査・執筆・翻訳したもので、確認の根拠は公開された原文と所蔵機関の説明です。翻訳は原文の証拠チェーンを踏襲しており、新たな独立史料には数えません。独立した専門家チームや母語校閲の記録はなく、自動検査を専門家の鑑定や二名の署名と同等とはみなしません。",
             "事実、統計の対象範囲、論評を区別します。侵略行為や史実の否認を批判するものであり、日本の人々を批判の対象とするものではありません。"
           ]
         ],
@@ -367,7 +367,7 @@
         [
           "リポジトリへのアクセス",
           [
-            "ソースリポジトリは公開されており、内容、出典、改訂履歴を確認できます。リポジトリの公開は、独立したウェブサイトの公開や、検索エンジン・AIによる索引登録を意味するものではありません。"
+            "ソースリポジトリは公開されており、すべての項目、各項目の出典、過去の版の記録を確認できます。リポジトリの公開は、独立したウェブサイトが開設済みであることや、検索エンジン・AIに収録済みであることを意味するものではありません。"
           ]
         ]
       ]
