@@ -51,8 +51,12 @@ for (const [path, $] of pages) {
   assert.equal(new URL(canonical).pathname, expected, `canonical 路径不匹配：${path}`);
   if (path !== '/404.html') {
     const variants = $('link[rel="alternate"]').toArray();
-    assert.equal(variants.length, 5, path);
-    assert.deepEqual(variants.map(el => $(el).attr('hreflang')).sort(), [...locales, 'x-default'].sort());
+    const entry = data.entries.find(e => e.path === expected);
+    const availableLocales = entry
+      ? data.entries.filter(e => e.translationKey === entry.translationKey).map(e => e.languages[0])
+      : locales;
+    assert.equal(variants.length, availableLocales.length + 1, path);
+    assert.deepEqual(variants.map(el => $(el).attr('hreflang')).sort(), [...availableLocales, 'x-default'].sort());
     assert.equal($('nav.languages a[aria-current="page"]').length, 1);
     for (const el of variants) {
       const href = $(el).attr('href');
@@ -133,8 +137,7 @@ for (const locale of locales) {
   const matching = data.entries.filter(e => e.languages[0] === locale);
   const home = pages.get(localizedPath(locale) + 'index.html');
   assert.deepEqual(home('.item-list a').toArray().map(a => home(a).attr('href')).sort(), matching.map(e => e.path).sort());
-  // This edition deliberately includes the same five topics in all four languages.
-  assert.equal(matching.length, 5);
+  assert.equal(matching.length, publicEntries.filter(e => e.data.languages[0] === locale).length);
   if (locale === 'zh-CN') continue;
   const root = 'dist' + localizedPath(locale);
   const localData = JSON.parse(await readFile(root + 'data/entries.json', 'utf8'));
@@ -147,5 +150,6 @@ for (const locale of locales) {
   for (const match of localIndex.matchAll(/\]\((https:\/\/[^)]+)\)/g)) assertLink(match[1], origin);
   for (const e of data.entries) assert.equal(localIndex.includes(e.url + ')'), e.languages[0] === locale, e.url);
 }
-assert.equal(pages.size, 41);
-console.log('多语言校验通过：4 种语言，每种 5 篇；原文关联、语言切换、双向 hreflang 和分语言导出一致。');
+// Each locale has a home and four informational pages, plus a shared 404 page.
+assert.equal(pages.size, publicEntries.length + locales.length * 5 + 1);
+console.log('多语言校验通过：按各语言实际公开条目核对；原文关联、语言切换、双向 hreflang 和分语言导出一致。');
